@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	//const int num_students = 5;
+	int scores[] = { 84, 92, 76, 81, 56 };
+
+	const int num_students = sizeof(scores) / sizeof(int);
+	cout << num_students << endl;
+	cout << "int size" << sizeof(int) << endl;
+	cout << "score size" << sizeof(scores) << endl;
+
+	int total_score = 0;
+	int max_score = 0;
+	int min_score = 100;
+
+	for (int i = 0; i < num_students; ++i)
+	{
+		total_score += scores[i];
+		max_score = (max_score < scores[i]) ? scores[i] : max_score;
+		min_score = (min_score > scores[i]) ? scores[i] : min_score;
+	}
+
+	double avg_score = static_cast<double>(total_score) / num_students;
+	cout << avg_score << endl;
+	cout << "max_score : " << max_score << endl;
+	cout << "min score : " << min_score << endl;
+}
