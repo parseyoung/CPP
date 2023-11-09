@@ -1,0 +1,5 @@
+﻿  chapter4.9.main.cpp
+C:\Users\samsung\Desktop\홍정모 C++\Project1\chapter4.9\chapter4.9.main.cpp(19,13): warning C4101: 'home2school' :참조되지 않은 지역 변수입니다.
+C:\Users\samsung\Desktop\홍정모 C++\Project1\chapter4.9\chapter4.9.main.cpp(18,13): warning C4101: 'homework' :참조되지 않은 지역 변수입니다.
+C:\Users\samsung\Desktop\홍정모 C++\Project1\chapter4.9\chapter4.9.main.cpp(17,9): warning C4101: 'my_distance' :참조되지 않은 지역 변수입니다.
+  chapter4.9.vcxproj -> C:\Users\samsung\Desktop\홍정모 C++\Project1\x64\Debug\chapter4.9.exe

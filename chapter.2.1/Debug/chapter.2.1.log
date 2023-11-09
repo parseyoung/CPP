@@ -1,0 +1,9 @@
+﻿  2.1.main.cpp
+C:\Users\samsung\Desktop\홍정모 C++\chapter.2.1\2.1.main.cpp(18,6): error C2374: 'a': redefinition; multiple initialization
+C:\Users\samsung\Desktop\홍정모 C++\chapter.2.1\2.1.main.cpp(16): message : see declaration of 'a'
+C:\Users\samsung\Desktop\홍정모 C++\chapter.2.1\2.1.main.cpp(23,6): error C2086: 'int k': redefinition
+C:\Users\samsung\Desktop\홍정모 C++\chapter.2.1\2.1.main.cpp(22): message : see declaration of 'k'
+C:\Users\samsung\Desktop\홍정모 C++\chapter.2.1\2.1.main.cpp(23,13): error C2086: 'int l': redefinition
+C:\Users\samsung\Desktop\홍정모 C++\chapter.2.1\2.1.main.cpp(22): message : see declaration of 'l'
+C:\Users\samsung\Desktop\홍정모 C++\chapter.2.1\2.1.main.cpp(23,22): error C2374: 'm': redefinition; multiple initialization
+C:\Users\samsung\Desktop\홍정모 C++\chapter.2.1\2.1.main.cpp(22): message : see declaration of 'm'

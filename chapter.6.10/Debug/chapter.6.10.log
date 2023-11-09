@@ -1,0 +1,3 @@
+﻿  6.10.main.cpp
+C:\Users\samsung\Desktop\홍정모 C++\Project1\chapter.6.10\6.10.main.cpp(14,15): error C2372: 'name': 재정의. 간접 참조 형식이 다릅니다.
+C:\Users\samsung\Desktop\홍정모 C++\Project1\chapter.6.10\6.10.main.cpp(12): message : 'name' 선언을 참조하십시오.

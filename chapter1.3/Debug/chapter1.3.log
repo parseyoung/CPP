@@ -1,0 +1,2 @@
+﻿  main_chapter1.3.cpp
+C:\Users\samsung\Desktop\홍정모 C++\chapter1.3\main_chapter1.3.cpp(6): error C4700: uninitialized local variable 'y' used
