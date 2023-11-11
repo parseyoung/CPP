@@ -24,7 +24,7 @@ const가 붙는 위치에 따라 다름
 주소는 바꾸지 못하고, 주소가 가르키는 값은 바꿀 수 있음, 진정한 const pointer임
 2)
 	int value1 = 5;
-	int * const ptr = &value1;
+	int *const ptr = &value1;
 
 	int value2 = 6;
 	*ptr = value2;
