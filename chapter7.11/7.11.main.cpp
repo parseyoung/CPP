@@ -1,8 +1,10 @@
-//std::vector를 stack처럼 사용하기
-// vector은 size와 capacity(용량)이 있음
-// capacity(용량)만큼 메모리를 가지고 있지만 그중에 몇 size를 사용한다 이런 느낌임
-// heap의 new, delete은 느림 안 쓰는게 좋음
-// vector을 잘 활용하는 방법은 new와 delete를 최대한 덜 호출하는 거임
+/*
+std::vector를 stack처럼 사용하기
+vector은 size와 capacity(용량)이 있음
+capacity(용량)만큼 메모리를 가지고 있지만 그중에 몇 size를 사용한다 이런 느낌임
+heap의 new, delete은 느림 안 쓰는게 좋음
+vector을 잘 활용하는 방법은 new와 delete를 최대한 덜 호출하는 거임
+*/
 
 #include <iostream>
 #include <vector>

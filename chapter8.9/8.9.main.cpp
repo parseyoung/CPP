@@ -1,42 +1,37 @@
 // class 와 const
 // const로 막을 수 있는 부분은 다 막아 놓는게 좋음
 // 그래야 디버깅에 유리함 + 실수를 줄일 수 있음
-// 11/21에 이어서 하겠슴!!!!!
+// const의 여부로 오버로딩 가능
 #include <iostream>
+#include <string>
 using namespace std;
 
 class Something
 {
 public:
-	int m_value = 0;
 
-	void setValue(int value) 
-	{ 
-		m_value = value; 
-	}
+	string m_value = "default";
 
-	int getValue() const // 멤버변수의 값을 바꾸지 않겠다(const)
-	{ 
+	const string& getValue() const {
+		cout << "const version" << endl;
 		return m_value;
 	}
+
+	string& getValue() {
+		cout << "non-const version" << endl;
+		return m_value; 
+	}
+
 };
 
-void print(Something st)
-{
-	cout << &st << endl;
-
-	cout << st.m_value << endl;
-}
 
 int main()
 {
 	Something something;
-	//something.setValue(2);
-	something.getValue();
+	something.getValue() = 10;
 
-	print(something);
-
-	cout << &something << endl;
+	const Something something2;
+	something2.getValue();
 
 	return 0;
 }
