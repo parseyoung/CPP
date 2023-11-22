@@ -15,7 +15,7 @@ private:
 	int m_cents;
 
 public:
-	Cents(int cents) { m_cents = cents; }
+	Cents(int cents) { m_cents = cents; } // 생성자 (객체 초기화)
 
 	int getCents() const { return m_cents; }
 };
