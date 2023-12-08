@@ -20,6 +20,11 @@ public:
 		m_name = name_in;
 	}
 
+	std::string getName()
+	{
+		return m_name;
+	}
+
 	void setIntel(const int& intel_in)
 	{
 		m_intel = intel_in;

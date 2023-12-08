@@ -11,7 +11,9 @@ private:
 	int m_denominator;
 
 public:
-	Fraction(int num = 0, int den = 1)
+	Fraction(char) = delete;
+
+	explicit Fraction(int num = 0, int den = 1)
 		: m_numerator(num), m_denominator(den)
 	{
 		assert(den != 0);
@@ -39,8 +41,9 @@ void doSomething(Fraction frac)
 int main()
 {
 	Fraction frac(7);
+	//Fraction frac2('c');
 	doSomething(frac);
 	doSomething(Fraction(9));
-	doSomething(8);
+	//doSomething(7);
 	return 0;
 }

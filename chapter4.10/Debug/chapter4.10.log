@@ -1,2 +1,3 @@
 ﻿  4.10.main.cpp
-LINK : fatal error LNK1168: C:\Users\samsung\Desktop\홍정모 C++\Project1\Debug\chapter4.10.exe을(를) 쓰기용으로 열 수 없습니다.
+  LINK : C:\Users\samsung\Desktop\홍정모 C++\Project1\Debug\chapter4.10.exe을(를) 찾을 수 없거나 마지막 증분 링크에 의해 빌드되지 않았습니다. 전체 링크를 수행하고 있습니다.
+  chapter4.10.vcxproj -> C:\Users\samsung\Desktop\홍정모 C++\Project1\Debug\chapter4.10.exe

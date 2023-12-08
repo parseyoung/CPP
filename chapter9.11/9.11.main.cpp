@@ -1,3 +1,4 @@
+// 대입 연산자, 오버로딩, 깊은 복사, 얕은 복사
 #include <cassert>	
 #include <iostream>
 using namespace std;
@@ -8,6 +9,8 @@ class Mystring
 public:
 	char* m_data = nullptr;
 	int m_length = 0;
+
+	std::string data;
 
 public:
 	Mystring(const char* source = "")
