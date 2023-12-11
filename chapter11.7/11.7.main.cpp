@@ -40,7 +40,7 @@ public:
 
 	friend std::ostream& operator << (std::ostream& out, const Derived& b)
 	{
-		cout << static_cast<Base>(b);
+		cout << static_cast<Base>(b); // ªÛ¿ß operator print()
 		out << "This is derived output" << endl;
 		return out;
 	}
