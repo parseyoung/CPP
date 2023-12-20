@@ -5,6 +5,14 @@ using namespace std;
 
 int main()
 {
+	// std::setw Ä­¼ö ¸ÂÃç¼­ ¶ç¿ì±â
+	cout << -12345 << endl;
+	cout.fill('*'); // ºóÄ­ ¶ç¿ï ¶§ *·Î Ã¤¿ì±â on
+	cout << std::setw(10) << -12345 << endl;
+	cout << std::setw(10) << std::left << -12345 << endl;
+	cout << std::setw(10) << std::right << -12345 << endl;
+	cout << std::setw(10) << std::internal << -12345 << endl;
+
 	//cout << std::defaultfloat;
 	cout << std::setprecision(3) << 123.456 << endl; // 123
 	cout << std::setprecision(4) << 123.456 << endl; // 123.5
