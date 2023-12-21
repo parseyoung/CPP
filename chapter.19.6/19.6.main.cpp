@@ -10,7 +10,7 @@
 #include <atomic>
 #include <future>
 #include <numeric> // std::inner_product
-#include <exception> // parallel execution
+#include <execution> // parallel execution
 
 using namespace std;
 
@@ -48,6 +48,15 @@ void dotProductAtomic(const vector<int>& v0, const vector<int>& v1,
 	{
 		sum += v0[i] * v1[i];
 	}
+}
+
+auto dotProductFuture(const vector<int>& v0, const vector<int>& v1,
+	const unsigned i_start, const unsigned i_end) {
+	int sum = 0; // local sum
+	for (unsigned i = i_start; i < i_end; ++i) {
+		sum += v0[i] * v1[i];
+	}
+	return sum;
 }
 
 int main()
@@ -90,7 +99,56 @@ int main()
 		cout << endl;
 	}
 
-	cout << "Naive" << endl;
+
+	//cout << "Naive" << endl;
+	//{
+	//	const auto sta = chrono::steady_clock::now();
+	//	//unsigned long long sum = 0;
+	//	atomic<unsigned long long> sum = 0;
+
+	//	vector<thread> threads;
+	//	threads.resize(n_threads);
+
+	//	const unsigned n_per_thread = n_data / n_threads; // assumrs remainder = 0
+	//	for (unsigned t = 0; t < n_threads; ++t)
+	//		threads[t] = std::thread(dotProductNaive, std::ref(v0), std::ref(v1),
+	//			t * n_per_thread, (t + 1) * n_per_thread, std::ref(sum));
+
+	//	for (unsigned t = 0; t < n_threads; ++t)
+	//		threads[t].join();
+
+	//	const chrono::duration<double> dur = chrono::steady_clock::now() - sta;
+
+	//	cout << dur.count() << endl;
+	//	cout << sum << endl;
+	//	cout << endl;
+	//}
+
+	//cout << "Lockguard" << endl;
+	//{
+	//	const auto sta = chrono::steady_clock::now();
+	//	unsigned long long sum = 0;
+	//	//atomic<unsigned long long> sum = 0;
+
+	//	vector<thread> threads;
+	//	threads.resize(n_threads);
+
+	//	const unsigned n_per_thread = n_data / n_threads; // assumrs remainder = 0
+	//	for (unsigned t = 0; t < n_threads; ++t)
+	//		threads[t] = std::thread(dotProductLock, std::ref(v0), std::ref(v1),
+	//			t * n_per_thread, (t + 1) * n_per_thread, std::ref(sum));
+
+	//	for (unsigned t = 0; t < n_threads; ++t)
+	//		threads[t].join();
+
+	//	const chrono::duration<double> dur = chrono::steady_clock::now() - sta;
+
+	//	cout << dur.count() << endl;
+	//	cout << sum << endl;
+	//	cout << endl;
+	//}
+
+	cout << "Atomic" << endl;
 	{
 		const auto sta = chrono::steady_clock::now();
 		//unsigned long long sum = 0;
@@ -113,5 +171,42 @@ int main()
 		cout << endl;
 	}
 
+	cout << "future" << endl;
+	{
+		const auto sta = chrono::steady_clock::now();
+		unsigned long long sum = 0;
+
+		vector<std::future<unsigned long long>> futures;
+		futures.resize(n_threads);
+
+		const unsigned n_per_thread = n_data / n_threads;
+		for (unsigned t = 0; t < n_threads; ++t)
+			futures[t] = std::async(std::launch::async, dotProductFuture, std::ref(v0), std::ref(v1),
+				t * n_per_thread, (t + 1) * n_per_thread);
+
+		for (unsigned t = 0; t < n_threads; ++t)
+			sum += futures[t].get();
+
+		const chrono::duration<double> dur = chrono::steady_clock::now() - sta;
+
+		cout << dur.count() << endl;
+		cout << sum << endl;
+		cout << endl;
+	}
+
+	cout << "std::transform_reduce" << endl;
+	{
+		const auto sta = chrono::steady_clock::now();
+
+		//const auto sum = std::transform_reduce(std::execution::seq, v0.begin(), v0.end(), v1.begin(), 0ull);
+		const auto sum = std::transform_reduce(std::execution::par, v0.begin(), v0.end(), v1.begin(), 0ull);
+
+		const chrono::duration<double> dur = chrono::steady_clock::now() - sta;
+
+		cout << dur.count() << endl;
+		cout << sum << endl;
+		cout << endl;
+
+	}
 	return 0;
 }
