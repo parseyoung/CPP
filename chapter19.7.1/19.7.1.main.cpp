@@ -59,6 +59,7 @@ void doSomething(CustomVector& vec)
 	CustomVector new_vec(vec);
 }
 
+// R-value overload 할 경우 명확하게 std::move() 해야 함
 void doSomething(CustomVector&& vec)
 {
 	cout << "Press by R-reference" << endl;
@@ -77,7 +78,7 @@ int main()
 
 	//CustomVector temp(my_vec); // copy
 
-	//CustomVector temp(std::move(my_vec)); //move
+	//CustomVector temp(std::move(my_vec)); // move
 	//cout << my_vec.n_data << endl;
 
 	/*doSomething(my_vec);
