@@ -1,4 +1,6 @@
 // Type Inference(자료형 추론) auto와 decltype
+// auto : 컴파일러가 초기 값을 기반으로 자료형 추론, 남발하면 가독성 떨어짐
+// decltype : 표현식이나 개체의 자료형 조회 시 사용, 자료형만을 반환
 #include <iostream>
 #include <vector>
 #include <algorithm> // std::min
