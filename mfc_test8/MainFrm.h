@@ -40,6 +40,9 @@ protected:
 	afx_msg void OnSetFocus(CWnd *pOldWnd);
 	DECLARE_MESSAGE_MAP()
 
+public:
+	afx_msg void OnSetCursor(CWnd* pWnd, UINT nHitTest, UINT message);
+
 };
 
 

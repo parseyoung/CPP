@@ -59,6 +59,8 @@ void CChildView::OnPaint()
 
 
 
+
+
 void CChildView::OnLButtonDown(UINT nFlags, CPoint point)
 {
 	SetCapture(); // 마우스 캡쳐 시작

@@ -33,6 +33,6 @@ protected:
 	afx_msg void OnPaint();
 	DECLARE_MESSAGE_MAP()
 public:
-	afx_msg BOOL OnSetCursor(CWnd* pWnd, UINT nHitTest, UINT message);
+	afx_msg void OnSetCursor(CWnd* pWnd, UINT nHitTest, UINT message);
 };
 
