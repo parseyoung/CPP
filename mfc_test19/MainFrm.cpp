@@ -4,7 +4,7 @@
 
 #include "pch.h"
 #include "framework.h"
-#include "mfc_test17.h"
+#include "mfc_test19.h"
 
 #include "MainFrm.h"
 
@@ -32,7 +32,7 @@ static UINT indicators[] =
 
 CMainFrame::CMainFrame() noexcept
 {
-	// TODO: 
+	// TODO: 여기에 멤버 초기화 코드를 추가합니다.
 }
 
 CMainFrame::~CMainFrame()
