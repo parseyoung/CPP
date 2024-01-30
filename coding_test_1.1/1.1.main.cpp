@@ -16,6 +16,7 @@ N개의 문자열이 주어지면 N개의 문자열이 주어지면 이 문자열들의 최대 공통 접두사를
 #include <vector>
 #include <algorithm>
 #include <set>
+#include <climits> // for INT_MAX
 
 using namespace std;
 
