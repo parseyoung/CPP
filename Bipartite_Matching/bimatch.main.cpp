@@ -14,7 +14,7 @@ int n = 3, m, s;
 
 // 매칭에 성공한경우 True, 실패 False
 bool dfs(int x) {
-	// 연결된 모든 노드에 대해서 들어갈 수 있는지 시도
+	// 연결된 모든 노드에 대ehd해서 들어갈 수 있는지 시도
 	for (int i = 0; i < a[x].size(); i++) {
 		int t = a[x][i];
 		// 이미 처리한 노드는 볼 필요 없음
