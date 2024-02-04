@@ -1,3 +1,0 @@
-﻿  chapter.4.5.main.cpp
-C:\Users\samsung\Desktop\홍정모 C++\Project1\chapter.4.5\chapter.4.5.main.cpp(10,8): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  chapter.4.5.vcxproj -> C:\Users\samsung\Desktop\홍정모 C++\Project1\x64\Debug\chapter.4.5.exe

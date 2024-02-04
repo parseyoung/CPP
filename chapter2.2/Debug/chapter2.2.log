@@ -1,3 +1,0 @@
-﻿  2.2.main.cpp
-C:\Users\samsung\Desktop\홍정모 C++\chapter2.2\2.2.main.cpp(37,6): error C2371: 'i': redefinition; different basic types
-C:\Users\samsung\Desktop\홍정모 C++\chapter2.2\2.2.main.cpp(34): message : see declaration of 'i'

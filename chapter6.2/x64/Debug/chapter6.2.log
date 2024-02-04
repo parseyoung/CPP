@@ -1,6 +1,0 @@
-﻿  6.2.main.cpp
-C:\Users\samsung\Desktop\홍정모 C++\Project1\chapter6.2\6.2.main.cpp(7,31): warning C4311: '형식 캐스트': 'int *[]'에서 'int'(으)로 포인터가 잘립니다.
-C:\Users\samsung\Desktop\홍정모 C++\Project1\chapter6.2\6.2.main.cpp(7,31): warning C4302: '형식 캐스트': 'int *[]'에서 'int'(으)로 잘립니다.
-C:\Users\samsung\Desktop\홍정모 C++\Project1\chapter6.2\6.2.main.cpp(21,31): warning C4311: '형식 캐스트': 'int (*)[20]'에서 'int'(으)로 포인터가 잘립니다.
-C:\Users\samsung\Desktop\홍정모 C++\Project1\chapter6.2\6.2.main.cpp(21,31): warning C4302: '형식 캐스트': 'int (*)[20]'에서 'int'(으)로 잘립니다.
-  chapter6.2.vcxproj -> C:\Users\samsung\Desktop\홍정모 C++\Project1\x64\Debug\chapter6.2.exe
